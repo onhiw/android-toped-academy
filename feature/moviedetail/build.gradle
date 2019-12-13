@@ -1,0 +1,31 @@
+apply from: "$rootDir/common.gradle"
+
+dependencies {
+
+    implementation project(Modules.abstraction)
+    implementation project(Modules.network)
+    implementation project(Modules.data)
+
+    //lifecycle
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.1.0"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0"
+    implementation Jetpack.lifecycle
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    kapt Jetpack.lifecycleCompiler
+
+    //coroutine
+    implementation Coroutines.core
+    implementation Coroutines.android
+
+    //ui
+    implementation Android.appCompat
+    implementation Android.ktx
+    implementation Android.constraintLayout
+    implementation Jetpack.recyclerView
+
+    //network
+    implementation Retrofit.retrofit
+    implementation Retrofit.gsonConverter
+    implementation Retrofit.coroutinesAdapter
+    implementation Retrofit.okHttpLogging
+}

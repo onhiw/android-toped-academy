@@ -1,0 +1,15 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+        package="com.example.moviedetail" >
+    <application>
+        <activity android:name=".ui.MovieDetailActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="movie"
+                        android:host="detail"/>
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
